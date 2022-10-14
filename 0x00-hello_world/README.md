@@ -5,4 +5,5 @@ C break down
 3. name
 4. puts
 5. printf
-6. size
+6. size7. intel
+8. quotes.c
