@@ -9,3 +9,6 @@
 7. print tebahpla
 8. print base 16
 9. print comb
+10. print comb3
+11. print comb4
+12. print comb5
