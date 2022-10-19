@@ -1,10 +1,13 @@
 #include "main.h"
+
 /**
- *add() - prints out the sum
+ * add - Adds two integers.
+ * a: The first integer to be added.
+ * b: The second integer to be added.
  *
- *Return: 0
+ * Return: The result of the addition.
  */
-int add(int, int){
-  int result = a + b;
-  _putchar('result is = %d',result);
+int add(int a, int b)
+{
+	return (a + b);
 }
