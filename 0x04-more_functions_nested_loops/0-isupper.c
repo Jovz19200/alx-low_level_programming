@@ -20,4 +20,4 @@ int _isupper(int c)
         }
         
         return (upper);
-        }
+}
