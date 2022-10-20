@@ -18,5 +18,6 @@ int _isupper(int c)
                         break;
                 }
         }
-        return(upper);
-}
+        
+        return (upper);
+        }
