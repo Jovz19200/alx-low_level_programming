@@ -1,15 +1,16 @@
 #include "main.h"
+#include <string.h>
 
 /**
- *_strncat - append characters from source
- *@dest: parameter 1
- *@src: parameter 2
- *@n: parameter 3
+ * _strncat - append char
+ * @dest: param 1
+ * @src: param 2
+ * @n: param 3
  *
- *Return: string
+ * Return: string
  */
 char *_strncat(char *dest, char *src, int n)
 {
-  strncat(dest, src, n);
-  return (dest);
+	strncat(dest, src, n);
+	return (dest);
 }
