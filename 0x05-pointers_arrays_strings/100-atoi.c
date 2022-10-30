@@ -18,12 +18,12 @@ int _atoi(char *s)
 	{
 		if (*s == '-')
 		{
-			count ++;
+			count++;
 		}
 		if (count % 2 == 0)
 			label = -1;
-		else 
-			label = +1
+		else
+			label = +1;
 		if (*s == '+')
 			label *= +1;
 		s++;
