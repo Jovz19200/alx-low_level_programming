@@ -9,9 +9,9 @@ int _atoi(char *s)
 	int label = 1;
 	unsigned int num = 0;
 
-	while (('0' <= *s && '9' >= *s) && *s != '\0')
+	while ('0' <= *s && '9' >= *s && *s != '\0')
 	{
-		num = (num * 10) + (*s - '\0');
+		num = (num * 10) + (*s - '0');
 		s++;
 	}
 	while (!('0' <= *s && '9' >= *s) && *s != '\0')
