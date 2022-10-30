@@ -20,7 +20,7 @@ int _atoi(char *s)
 		{
 			count++;
 		}
-		if (count % 2 == 0)
+		if (count % 2 != 0)
 			label = -1;
 		else
 			label = +1;
