@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * puts2 - prints characters ;
+ * puts2 - prints characters 
  * @str: string characters
+ *
+ *Return: even characters
  */
 
 void puts2(char *str)
