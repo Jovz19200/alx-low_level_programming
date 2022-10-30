@@ -19,7 +19,7 @@ int _atoi(char *s)
 		if (*s == '-')
 			label *= -1;
 		if (*s == '+')
-			label *= -1;
+			label *= +1;
 		s++;
 	}
 	return (label * num);
