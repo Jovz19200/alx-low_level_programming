@@ -6,7 +6,7 @@
  */
 int _atoi(char *s)
 {
-	int label = 1;
+	int label = 1, count = 0;
 	unsigned int num = 0;
 
 	while ('0' <= *s && '9' >= *s && *s != '\0')
@@ -17,7 +17,13 @@ int _atoi(char *s)
 	while (!('0' <= *s && '9' >= *s) && *s != '\0')
 	{
 		if (*s == '-')
-			label *= -1;
+		{
+			count ++;
+		}
+		if (count % 2 == 0)
+			label = -1;
+		else 
+			label = +1
 		if (*s == '+')
 			label *= +1;
 		s++;
