@@ -12,16 +12,18 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (a = 0; a < strlen(s); a++)
 	{
+		if (s[a] != 32)
+		{
 		for (b = 0; b < strlen(accept) ; b++)
 		{
-			if (s[a] != accept[b])
-				continue;
-			else
+			if (s[a] == accept[b])
 			{
 				byte++;
-				break;
 			}
 		}
+		}
+		else
+			return (byte);
 	}
 	return (byte);
 }
