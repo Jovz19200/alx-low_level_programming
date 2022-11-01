@@ -10,11 +10,11 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int a, b, byte = 0;
 
-	for (a = 0; a < strlen(s); a++)
+	for (a = 0; s[a] != '\0'; a++)
 	{
 		if (s[a] != 32)
 		{
-		for (b = 0; b < strlen(accept) ; b++)
+		for (b = 0; accept[b] != '\0'; b++)
 		{
 			if (s[a] == accept[b])
 			{
