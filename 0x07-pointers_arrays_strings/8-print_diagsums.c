@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdion.h>
+#include <stdio.h>
 /**
  *print_diagsums - -function to return the sum of two square matrix's diagonal
  *@a: the array to use
@@ -29,6 +29,6 @@ void print_diagsums(int *a, int size)
 		}
 	}
 	printf("%d", diag1);
-	printf(" , ");
+	printf(", ");
 	printf("%d", diag2);
 }
