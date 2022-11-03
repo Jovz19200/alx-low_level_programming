@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _strstr - function to find the first occurence of the string @needle in s
  * @haystack: pointer to the string to search from
@@ -8,17 +9,19 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i = 0, j = 0;
 
-	while (haystack[i] != '\0')
+	for (; *haystack != '\0'; haystack++)
 	{
-		while (needle[j] !=  '\0' && (haystack[i] == needle[0]))
+		char *i = haystack;
+		char *j = needle;
+
+		while (*i == *j && *j != '\0')
 		{
-			if (haystack[i + j] != needle[j])
-				break;
+			i++;
+			j++;
 		}
-		if (!(needle[j]))
-		return (haystack + i);
+		if (*j == '\0')
+			return (haystack);
 	}
-	return (NULL);
+	return (0);
 }
