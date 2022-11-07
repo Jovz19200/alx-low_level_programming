@@ -11,10 +11,10 @@ int main(int argc, char *argv[])
 {
 	int product = 1, i;
 
-	if (argc != 3 )
+	if (argc != 3)
 	{
 		printf("%s\n", "Error");
-		return (1);	
+		return (1);
 	}
 	else
 	{
