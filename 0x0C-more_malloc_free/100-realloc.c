@@ -12,15 +12,18 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	char *cont, *ptr1 = ptr;
 	int a, b;
 
-	if (old_size == new_size)
-		return (ptr);
+	if (ptr == NULL)
+	{
+		cont = malloc(new_size);
+		return (cont);
+	}
 	else if (new_size == 0)
 	{
 		free(ptr);
-		return (ptr);
+		return (NULL);
 	}
-	else if (ptr == NULL)
-		return (cont = malloc(new_size));
+	else if (new_size == old_size)
+		return (ptr);
 
 	cont = malloc(new_size);
 	if (cont == NULL)
