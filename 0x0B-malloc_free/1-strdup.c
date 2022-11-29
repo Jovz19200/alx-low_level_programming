@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strdup - function to return the pointer to the string
  * @str: input string
@@ -14,7 +15,10 @@ char *_strdup(char *str)
 
 	container = malloc(sizeof(char) * (len + 1));
 	if (container == NULL)
-		return (NULL);
+	{
+		printf("failed to allocate the memory");
+		return (1);
+	}
 
 	for (a = 0; a < len; a++)
 	{
