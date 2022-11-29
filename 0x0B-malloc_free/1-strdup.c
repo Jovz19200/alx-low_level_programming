@@ -10,9 +10,9 @@ char *_strdup(char *str)
 	int a, len = strlen(str);
 
 	if (str == NULL)
-	       return (NULL);
+		return (NULL);
 
-	container = malloc(sizeof(char) * len);
+	container = malloc(sizeof(char) * (len + 1));
 	if (container == NULL)
 		return (NULL);
 
@@ -20,5 +20,6 @@ char *_strdup(char *str)
 	{
 		container[a] = str[a];
 	}
+	container[a] = '\0';
 	return (container);
 }
