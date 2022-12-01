@@ -1,0 +1,1 @@
+bit manipulation break down
