@@ -24,12 +24,12 @@ unsigned int binary_to_uint(const char *b)
 		{
 			if (b[len] == '1')
 			{
-				result = result + j;
-				j = j * 2;
+			result = result + j;
+			j *= 2;
 			}
 			else
 			{
-			j = j * 2;
+				j *= 2;
 			}
 		}
 
