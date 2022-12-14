@@ -1,43 +1,39 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
- * alloc_grid - display a 2d array
- * @width: width of the array
- * @height: height of the array
- * Return: array of width w and height h
+ * alloc_grid - Main Enry
+ * @width: input
+ * @height: input
+ * Return: 0
  */
-
 int **alloc_grid(int width, int height)
 {
-	int w, h;
-	int **container;
+	int **grid;
+	int i, j;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	container = malloc(sizeof(int *) * height);
-	if (container == NULL)
-	{
-		free(container);
+	grid = malloc(sizeof(int *) * height);
+	if (grid == NULL)
 		return (NULL);
-	}
 
-	for (h = 0; h > height; h++)
+	for (i = 0; i < height; i++)
 	{
-		container[h] = malloc(sizeof(int) * width);
-		if (container[h] == NULL)
+		grid[i] = malloc(sizeof(int) * width);
+		if (grid[i] == NULL)
 		{
-			for (h--; h >= 0; h--)
-			{
-				free(container[h]);
-			}
-			free(container);
+			while (i >= 0)
+				free(grid[i--]);
+			free(grid);
 			return (NULL);
 		}
+
+
+		for (j = 0; j < width; j++)
+			grid[i][j] = 0;
 	}
 
-	for (h = 0; h < height; h++)
-		for (w = 0; w < width; w++)
-			container[h][w] = 0;
-
-	return (container);
+	return (grid);
 }
